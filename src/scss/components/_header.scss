@@ -1,14 +1,69 @@
 .header {
-    background-color: transparent;
+    background: rgba(11, 37, 69, 0.1);
+    backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 111;
-    padding: 21px 0;
+    transition: all ease-in-out .4s;
 
     &__container {
         @include flex-all-sb;
+    }
+
+    .nav {
+        ul {
+            @include flex-all-sb;
+
+            li {
+                &:not(:last-child) {
+                    a {
+                        padding-right: 30px;
+                        margin-right: 30px;
+                        border-right: 1px solid rgba(243, 251, 255, 0.2);
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 100%;
+                text-align: center;
+                letter-spacing: -0.03em;
+                color: var(--cs-bg-color);
+                padding: 27px 0;
+                transition: all ease-in-out .4s;
+
+                &:hover {
+                    color: var(--cs-yellow);
+                }
+            }
+        }
+    }
+
+    .link-target {
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 100%;
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: var(--cs-blue);
+        padding: 16px 20px;
+        background-color: var(--cs-bg-color);
+        border-radius: 4px;
+        box-shadow: 0px 12px 40px 3px transparent;
+        transition: all ease-in-out .4s;
+
+        &:hover {
+            box-shadow: 0px 12px 40px 3px rgba(243, 251, 255, 0.3);
+        }
+    }
+
+    .burger {
+        @include burger;
     }
 
 
@@ -22,5 +77,9 @@
 }
 
 .header.active-scroll {
-    // background-color: #202435;
+    background: rgba(11, 37, 69, 0.2);
+}
+
+body{
+    background-color: #2884CB;
 }

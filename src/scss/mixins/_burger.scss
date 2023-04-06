@@ -1,64 +1,63 @@
 /* stylelint-disable */
 @mixin burger {
-    display: flex;
-    border-radius: 10px;
-    padding: 10px;
-    background: rgba(234, 235, 240, 0.1);
-    transition: all ease-in-out .4s;
+  border: none;
+  background-color: transparent;
+  display: none;
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 111;
+
+  &__line {
     position: relative;
-    cursor: pointer;
-    position: relative;
-    z-index: 111;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cs-bg-color);
+    display: inline-block;
+    transition-duration: .4s;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 25px;
+      height: 3px;
+      background-color: var(--cs-bg-color);
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -7px;
+    }
 
     &::after {
-        content: "";
-        position: absolute;
+      top: 7px;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 10px; 
-        padding: 1px; 
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 14.71%, rgba(255, 255, 255, 0) 48.53%);
-        -webkit-mask: 
-           linear-gradient(#fff 0 0) content-box, 
-           linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-                mask-composite: exclude; 
-        transition: all ease-in-out .4s;
-    }
-
-    &:hover {
-        &::before {
-            background: linear-gradient(135deg, rgb(252, 80, 42) 14.71%, rgba(255, 255, 255, 0) 48.53%);
-        }
-    }
-  &.burger--active .img {
-      opacity: 0;
   }
 
   &.burger--active {
-      &::before,
-      &::after {
-            width: 18px;
-            height: 2px;
-            border-radius: none;
-            padding: 0;
-            background: var(--cs-grey);
-            transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-            opacity: 1;
-            top: calc(50% - 1px);
-            left: calc(50% - 9px);
-      }
+    .burger__line {
+        background-color: transparent;
 
-      &::before {
-        -webkit-mask-composite: unset;
-          transform: rotate(45deg); 
-      }
-      
-      &::after {
-          transform: rotate(-45deg);
-      }
+        &::before,
+        &::after {
+            opacity: 1;
+            top: 50%;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
   }
 }

@@ -15,6 +15,7 @@ body {
   background-color: var(--cs-bg-color);
   color: var(--cs-text-main);
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 img {
@@ -74,6 +75,7 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  width: 95%;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
