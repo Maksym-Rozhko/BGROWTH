@@ -34,13 +34,8 @@ import { enableScroll } from './functions/disable-scroll';
 // const modal = new GraphModal();
 
 // Реализация табов
-import GraphTabs from 'graph-tabs';
-const tabsWorkouts = new GraphTabs('workouts');
-const tabsStoreBasic = new GraphTabs('storeBasic');
-const tabsStoreAccessories = new GraphTabs('storeAccessories');
-const tabsStoreAmulets = new GraphTabs('storeAmulets');
-const tabsStoreExclusive = new GraphTabs('storeExclusive');
-const tabsRoadmapStages = new GraphTabs('stages');
+// import GraphTabs from 'graph-tabs';
+// const tabs = new GraphTabs('tabs');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
@@ -62,17 +57,11 @@ const tabsRoadmapStages = new GraphTabs('stages');
 // });
 
 // Подключение анимаций по скроллу
-import AOS from 'aos';
+// import AOS from 'aos';
 
-AOS.init({
-    disable: 'mobile',
-});
-
-import scrollr from './vendor/_scrollr';
-const whitePaperPrivacyParentContainer = document.querySelector('.white-paper.privacy');
-if (isDesktop() && !whitePaperPrivacyParentContainer) {
-	var scroll = scrollr.init({});
-}
+// AOS.init({
+//     disable: 'mobile',
+// });
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';

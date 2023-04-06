@@ -1,6 +1,6 @@
 const smoothScrollToElems = (links) => {
     const anchorsLink = document.querySelectorAll(links);
-  
+
     if (anchorsLink) {
         const smoothScroll = (anchors) => {
             for (let anchor of anchors) {
@@ -15,9 +15,9 @@ const smoothScrollToElems = (links) => {
                 });
             };
         };
-        
+
         smoothScroll(anchorsLink);
     }
 };
 
-smoothScrollToElems('.roadmap a.scroll-link');
+smoothScrollToElems('.section a.scroll-link');
