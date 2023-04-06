@@ -1,0 +1,86 @@
+@keyframes increaseScale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(5);
+    }
+}
+
+@keyframes increaseScaleMob {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }
+}
+
+@keyframes decreaseOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes increaseOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes swing {
+	15% {
+	  transform: translateX(9px);
+	}
+	30% {
+	  transform: translateX(-9px);
+	}
+	40% {
+	  transform: translateX(6px);
+	}
+	50% {
+	  transform: translateX(-6px);
+	}
+	65% {
+	  transform: translateX(3px);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+}
+
+@keyframes scrollRunning {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@keyframes scrollRunning2 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(-100%, -100%);
+    }
+}
+
+// /* The typing effect */
+// @keyframes typing {
+// 	from { width: 0; white-space: nowrap;}
+// 	to { width: 100%; max-width: 85px; white-space: wrap;}
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+// 	from, to { border-color: transparent }
+// 	50% { border-color: var(--cs-main) }
+// }

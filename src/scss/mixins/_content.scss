@@ -1,0 +1,13 @@
+@mixin btn-main {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 30px;
+    padding: 6px 16px;
+    background: rgba(234, 235, 240, 0.1);
+    transition: all ease-in-out .4s;
+    position: relative;
+
+    &:hover {
+    }
+}

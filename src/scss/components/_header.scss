@@ -1,0 +1,26 @@
+.header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    padding: 21px 0;
+
+    &__container {
+        @include flex-all-sb;
+    }
+
+
+    // .burger {
+    //     @include burger;
+    // }
+
+    .mobile-menu {
+        @include mobile-menu;
+	}
+}
+
+.header.active-scroll {
+    // background-color: #202435;
+}

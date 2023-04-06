@@ -1,0 +1,27 @@
+@mixin mobile-menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(47,50,55, .9);
+    z-index: 11;
+    transition: all ease-in-out .4s;
+
+    &__container {
+        width: 100%;
+        margin-left: auto;
+        background-color: var(--cs-body-bg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        padding-top: 21px;
+        padding-bottom: 81px;
+    }
+
+    &.menu--active {
+        right: 0;
+    }
+}

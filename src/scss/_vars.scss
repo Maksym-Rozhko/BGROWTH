@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Formular", sans-serif;
+  --content-width: 1700px;
+  --container-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --cs-yellow: #FBD128;
+  --cs-blue: #233B59;
+  --cs-blue-light: #2884CB;
+  --cs-blue-lighter: #74BCFF;
+  --cs-blue-thin: #C7DBE6;
+  --cs-bg-color: #F3FBFF;
+  --cs-text-main: #4B5461;
+}
