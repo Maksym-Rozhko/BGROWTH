@@ -1,5 +1,7 @@
 const smoothScrollToElems = (links) => {
     const anchorsLink = document.querySelectorAll(links);
+    const burger = document?.querySelector('[data-burger]');
+    const menu = document?.querySelector('[data-menu]');
 
     if (anchorsLink) {
         const smoothScroll = (anchors) => {
@@ -7,7 +9,13 @@ const smoothScrollToElems = (links) => {
                 const blockID = anchor.getAttribute('href');
 
                 anchor.addEventListener('click', (e) => {
+                    console.log('ss');
                     e.preventDefault();
+
+                    if (menu.classList.contains('menu--active')) {
+                        burger.click();
+                    }
+
                     document.querySelector(blockID).scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
@@ -20,4 +28,5 @@ const smoothScrollToElems = (links) => {
     }
 };
 
-smoothScrollToElems('.section a.scroll-link');
+smoothScrollToElems('.header .header__container a');
+smoothScrollToElems('.header .mobile-menu .nav a');

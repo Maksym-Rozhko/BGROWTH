@@ -225,3 +225,150 @@
         margin: 0 auto;
     }
 }
+
+.economy {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    &__container {
+        max-width: 1420px;
+        margin: 0 auto;
+    }
+
+    .group {
+        @include flex-all-sb;
+        gap: 50px;
+
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            .images {
+                &::after {
+                    right: 0;
+                    left: inherit;
+                }
+            }
+        }
+
+        .info {
+            max-width: 561px;
+        }
+
+        .label {
+            @include label;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 100%;
+            letter-spacing: -0.03em;
+            color: var(--cs-blue);
+            margin-top: 40px;
+            margin-bottom: 55px;
+        }
+
+        .text {
+            font-size: 21px;
+            line-height: 130%;
+            color: var(--cs-text-main);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .images {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                @include flex-all-center;
+                background-color: rgba(35, 59, 89, 0.64);
+                backdrop-filter: blur(20px);
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                left: 0;
+                bottom: 83px;
+            }
+
+            &.environment {
+                &::after {
+                    background-image: url('../images/icon/environment.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto;
+                }
+            }
+
+            &.wind {
+                &::after {
+                    background-image: url('../images/icon/wind-energy.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto;
+                }
+            }
+
+            img {
+                border-radius: 440px;
+            }
+        }
+
+        .target-form {
+            @include btn-main;
+            max-width: 194px;
+            margin-top: 55px;
+        }
+    }
+}
+
+.rules {
+    padding-top: 65px;
+    padding-bottom: 130px;
+
+    &__container {
+        background-image: url('../images/rules-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 78px 90px 72px 90px;
+        border-radius: 60px;
+        max-width: 1420px;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: var(--cs-bg-color);
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    a {
+        display: block;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: var(--cs-bg-color);
+        background: rgba(243, 251, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 12px;
+        padding: 22px 25px;
+        max-width: 366px;
+        transition: all ease-in-out .4s;
+
+        &:hover {
+            background: rgba(243, 251, 255, 0.30);
+        }
+    }
+}
