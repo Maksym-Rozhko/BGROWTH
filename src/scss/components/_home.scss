@@ -670,6 +670,7 @@
             gap: 40px;
             padding: 25px;
             background: #F3FBFF;
+            min-height: 120px;
             border-radius: 12px;
 
             &:not(:last-child) {
@@ -738,6 +739,67 @@
 
         img {
             border-radius: 428px;
+        }
+    }
+}
+
+.doit {
+    padding-top: 80px;
+    margin-bottom: 178px;
+    background-image: url('../images/doit-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-bottom: 151px;
+
+        p {
+            max-width: 580px;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 130%;
+            color: var(--cs-blue);
+            flex: 1;
+        }
+    }
+
+    &__container {
+        background-color: var(--cs-blue);
+        border-radius: 60px;
+        padding: 80px;
+        text-align: center;
+        position: relative;
+        bottom: -225px;
+
+        .label {
+            @include label;
+            color: var(--cs-blue-lighter);
+            border: 1px solid var(--cs-blue-lighter);
+        }
+
+        .title {
+            @include title;
+            color: var(--cs-bg-color);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            margin-bottom: 55px;
+            max-width: 1126px;
+        }
+
+        .target-form {
+            @include btn-main;
+            max-width: 194px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
