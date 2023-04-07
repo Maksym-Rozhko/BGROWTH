@@ -22,6 +22,7 @@
 }
 
 @mixin label {
+    display: inline-block;
     font-weight: 700;
     font-size: 13px;
     line-height: 100%;

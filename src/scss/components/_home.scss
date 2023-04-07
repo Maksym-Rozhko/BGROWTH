@@ -514,3 +514,115 @@
         }
     }
 }
+
+.competition {
+    padding-top: 146px;
+    padding-bottom: 112px;
+
+    &__container {
+        max-width: 1420px;
+        margin: 0 auto;
+        text-align: center;
+
+        .label {
+            @include label;
+        }
+
+        .title {
+            @include title;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 130%;
+            color: var(--cs-main);
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 140%;
+            color: var(--cs-text-main);
+            margin-top: 40px;
+            margin-bottom: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 682px;
+        }
+
+        .target-form {
+            @include btn-main;
+            max-width: 194px;
+            margin: 0 auto;
+        }
+    }
+
+    &__blocks {
+        @include flex-v-center;
+        gap: 20px;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.5;
+            filter: blur(52.5px);
+            background-color: var(--cs-blue-light);
+        }
+
+        &::after {
+            width: 162px;
+            height: 162px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            width: 81px;
+            height: 81px;
+            filter: blur(12px);
+            right: 169px;
+            bottom: -40px;
+        }
+
+        .block {
+            @include flex-v-center;
+            gap: 38px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 12px 40px 3px rgba(40, 132, 203, 0.05);
+            border-radius: 12px;
+            padding: 72px 78px 71px 56px;
+            flex: 1;
+            position: relative;
+            z-index: 1;
+
+            .image {
+                @include flex-all-center;
+                width: 110px;
+                height: 110px;
+                min-width: 110px;
+                min-height: 110px;
+                border-radius: 50%;
+                background-color: #E4EFFA;
+            }
+
+            p {
+                text-align: left;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 130%;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
