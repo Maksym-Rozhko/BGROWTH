@@ -79,15 +79,7 @@
         }
 
         .target-form {
-            background: #FBD128;
-            box-shadow: 0px 12px 40px 3px transparent;
-            border-radius: 12px;
-            backdrop-filter: none;
-
-            &:hover {
-                background: #FBD128;
-                box-shadow: 0px 12px 40px 3px rgba(235, 197, 45, 0.3);
-            }
+            @include btn-main;
         }
     }
 
@@ -141,31 +133,16 @@
         margin-bottom: 55px;
 
         .label {
-            font-weight: 700;
-            font-size: 13px;
-            line-height: 100%;
-            letter-spacing: -0.03em;
-            padding: 11px 20px;
-            border-radius: 12px;
-            color: var(--cs-grey);
-            border: 1px solid var(--cs-blue-thin);
+            @include label;
         }
 
         .title {
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 100%;
-            letter-spacing: -0.03em;
-            color: var(--cs-blue);
+            @include title;
             margin-top: 40px;
             margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
             max-width: 1028px;
-
-            span {
-                color: var(--cs-main);
-            }
         }
 
         .text {
@@ -197,5 +174,54 @@
                 opacity: 1;
             }
         }
+    }
+}
+
+.info-banner {
+    padding-top: 50px;
+    padding-bottom: 65px;
+
+    &__container {
+        background-color: rgba(40, 132, 203, .05);
+        border-radius: 60px;
+        padding: 84px 40px 76px 40px;
+        text-align: center;
+        position: relative;
+        background-image: url('../images/icon/info-banner-bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-image: url('../images/icon/info-banner-circle.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            right: -20px;
+            bottom: 90px;
+        }
+    }
+
+    .label {
+        @include label;
+    }
+
+    .title {
+        @include title;
+        margin-top: 40px;
+        margin-bottom: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 984px;
+    }
+
+    .target-form {
+        @include btn-main;
+        max-width: 194px;
+        margin: 0 auto;
     }
 }

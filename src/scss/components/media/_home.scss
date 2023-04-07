@@ -15,6 +15,11 @@
             }
         }
     }
+    .info-banner {
+        .title {
+            font-size: 40px;
+        }
+    }
 }
 
 @include small-tablet {
@@ -32,6 +37,7 @@
     }
     .point {
         padding-top: 50px;
+        padding-bottom: 25px;
 
         &__container {
             .title {
@@ -45,6 +51,18 @@
             .image {
                 opacity: .3;
             }
+        }
+    }
+    .info-banner {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        &__container {
+            padding: 40px 20px;
+        }
+
+        .title {
+            font-size: 30px;
         }
     }
 }
@@ -86,6 +104,15 @@
             }
         }
     }
+    .info-banner {
+        &__container {
+            padding: 40px 10px;
+        }
+
+        .title {
+            font-size: 24px;
+        }
+    }
 }
 
 @include small-mobile {
@@ -104,6 +131,11 @@
             .title {
                 font-size: 20px;
             }
+        }
+    }
+    .info-banner {
+        .title {
+            font-size: 20px;
         }
     }
 }
