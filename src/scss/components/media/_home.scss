@@ -7,6 +7,14 @@
             font-size: 90px;
         }
     }
+    .point {
+        padding-top: 100px;
+        &__container {
+            .title {
+                font-size: 40px;
+            }
+        }
+    }
 }
 
 @include small-tablet {
@@ -20,6 +28,23 @@
         .text {
             font-size: 18px;
             max-width: 561px;
+        }
+    }
+    .point {
+        padding-top: 50px;
+
+        &__container {
+            .title {
+                font-size: 30px;
+            }
+            .text {
+                font-size: 18px;
+            }
+        }
+        .swiper-slide-next {
+            .image {
+                opacity: .3;
+            }
         }
     }
 }
@@ -51,6 +76,16 @@
             }
         }
     }
+    .point {
+        &__container {
+            .title {
+                font-size: 24px;
+            }
+            .text {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 @include small-mobile {
@@ -61,6 +96,13 @@
         .links-group {
             a {
                 font-size: 14px;
+            }
+        }
+    }
+    .point {
+        &__container {
+            .title {
+                font-size: 20px;
             }
         }
     }
