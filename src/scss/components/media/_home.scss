@@ -26,6 +26,12 @@
             }
         }
     }
+    .looking {
+        &__container {
+            padding: 55px 75px;
+            gap: 40px;
+        }
+    }
 }
 
 @include small-desktop {
@@ -85,6 +91,16 @@
             }
         }
     }
+    .looking {
+        .content {
+            .title {
+                font-size: 40px;
+            }
+        }
+        &__container {
+            align-items: flex-start;
+        }
+    }
 }
 
 @include tablet {
@@ -113,6 +129,20 @@
                 max-width: 600px;
                 min-height: inherit;
             }
+        }
+    }
+    .looking {
+        &__container {
+            flex-direction: column;
+        }
+
+        .content {
+            max-width: inherit;
+        }
+
+        .images {
+            width: fit-content;
+            margin: 0 auto;
         }
     }
 }
@@ -255,6 +285,36 @@
             font-size: 16px;
         }
     }
+    .looking {
+        padding-top: 100px;
+
+        &__container {
+            padding: 55px 35px;
+        }
+
+        .content {
+            .title {
+                font-size: 30px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .text {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            .block {
+                gap: 20px;
+                padding: 15px;
+
+                strong {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -342,6 +402,35 @@
             font-size: 24px;
         }
     }
+    .looking {
+        padding-top: 250px;
+
+        &__container {
+            padding: 50px 15px;
+        }
+
+        .content {
+            .title {
+                font-size: 24px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .text {
+                font-size: 16px;
+            }
+            .block {
+                gap: 10px;
+                padding: 15px 10px;
+
+                strong {
+                    font-size: 11px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
 
 @include small-mobile {
@@ -376,6 +465,13 @@
                 p {
                     text-align: center;
                 }
+            }
+        }
+    }
+    .looking {
+        .content {
+            .block {
+                flex-direction: column;
             }
         }
     }

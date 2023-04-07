@@ -626,3 +626,118 @@
         }
     }
 }
+
+.looking {
+    padding-top: 112px;
+
+    &__container {
+        @include flex-v-center;
+        gap: 160px;
+        border-radius: 60px;
+        background-color: var(--cs-main);
+        padding: 55px 115px 55px 140px;
+    }
+
+    .content {
+        max-width: 700px;
+        width: 100%;
+
+        .label {
+            @include label;
+            color: var(--cs-blue-lighter);
+            border: 1px solid var(--cs-blue-lighter);
+        }
+
+        .title {
+            @include title;
+            margin-top: 40px;
+            margin-bottom: 55px;
+            color: var(--cs-bg-color);
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 130%;
+            margin-top: 0;
+            margin-bottom: 40px;
+            color: var(--cs-bg-color);
+        }
+
+        .block {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 25px;
+            background: #F3FBFF;
+            border-radius: 12px;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            strong {
+                display: block;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 100%;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+                color: var(--cs-blue);
+                white-space: nowrap;
+                padding: 8px 19px;
+                border: 1px solid var(--cs-yellow);
+                border-radius: 12px;
+                background-color: var(--cs-yellow);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 140%;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .images {
+        position: relative;
+        width: 100%;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            background-image: url('../images/icon/cloud-1.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 187px;
+            height: 80px;
+            left: 2px;
+            top: 74px;
+            animation: swing 10s infinite linear;
+        }
+
+        &::after {
+            background-image: url('../images/icon/cloud-2.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 278px;
+            height: 124px;
+            right: -87px;
+            bottom: 200px;
+            animation: swing 15s infinite linear reverse;
+        }
+
+        img {
+            border-radius: 428px;
+        }
+    }
+}
