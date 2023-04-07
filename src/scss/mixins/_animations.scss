@@ -57,10 +57,10 @@
 
 @keyframes scrollRunning {
     0% {
-        transform: translate(0, 0);
+        transform: translate(-100%, 0);
     }
     100% {
-        transform: translate(-100%, 0);
+        transform: translate(0, 0);
     }
 }
 
@@ -70,6 +70,17 @@
     }
     100% {
         transform: translate(-100%, -100%);
+    }
+}
+
+@keyframes preload_main_screen {
+    0% {
+        left: 0%;
+        opacity: 1;
+    }
+    100% {
+        left: -100%;
+        opacity: 0;
     }
 }
 
