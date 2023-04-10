@@ -57,11 +57,11 @@ import { enableScroll } from './functions/disable-scroll';
 // });
 
 // Подключение анимаций по скроллу
-// import AOS from 'aos';
+import AOS from 'aos';
 
-// AOS.init({
-//     disable: 'mobile',
-// });
+AOS.init({
+    disable: 'mobile',
+});
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';

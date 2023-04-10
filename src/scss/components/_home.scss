@@ -383,12 +383,25 @@
 .winners {
     padding-top: 124px;
     padding-bottom: 146px;
+    position: relative;
+    overflow: hidden;
+
+    canvas {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
 
     &__container {
         @include flex-all-sb;
         gap: 160px;
         max-width: 1406px;
-        margin: 0 auto
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
     }
 
     .images {
@@ -711,6 +724,7 @@
         &::after {
             content: "";
             position: absolute;
+            z-index: 1;
         }
 
         &::before {

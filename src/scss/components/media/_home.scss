@@ -16,6 +16,9 @@
             max-width: 1240px;
         }
     }
+    .section-group {
+        background-size: auto;
+    }
 }
 
 @include big-desktop {
@@ -343,6 +346,7 @@
     .winners {
         padding-top: 50px;
         padding-bottom: 25px;
+        background-color: var(--white);
 
         .info {
             .title {
@@ -689,7 +693,7 @@
         }
     }
     .looking {
-        padding-top: 250px;
+        padding-top: 50px;
 
         &__container {
             padding: 50px 15px;
