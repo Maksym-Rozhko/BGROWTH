@@ -1,5 +1,99 @@
-@include mobile {
+@include small-desktop {
     .footer {
+        &__container {
+            .info {
+                .text {
+                    max-width: 300px;
+                }
+            }
+            .block {
+                &:not(:last-child) {
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+}
 
+@include tablet {
+    .footer {
+        &__container {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .info {
+                margin-right: inherit;
+                padding: 50px 0;
+                width: 100%;
+                order: -1;
+                position: relative;
+
+                .text {
+                    max-width: inherit;
+                    margin-top: 24px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(199, 219, 230, 0.1);
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+
+            .block {
+                padding: 50px 0;
+
+                &:not(:last-child) {
+                    padding-right: 15px;
+                }
+                &:not(:first-child) {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include small-tablet {
+    .footer {
+        &__container {
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            .block {
+                @include flex-v-center;
+                flex-direction: column;
+                border-left: 1px solid rgba(199, 219, 230, 0.1);
+                border-bottom: 1px solid rgba(199, 219, 230, 0.1);
+                padding: 35px 0;
+
+                &:last-child {
+                    border-right: 1px solid rgba(199, 219, 230, 0.1);
+                    padding-right: 15px;
+                }
+
+                h3 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__copyright {
+            border-top: none;
+
+            .wrapper {
+                @include flex-all-sb;
+            }
+
+            .scroll-top {
+                position: static;
+                margin-left: 50px;
+                min-width: 52px;
+            }
+        }
     }
 }

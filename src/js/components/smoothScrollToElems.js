@@ -30,3 +30,5 @@ const smoothScrollToElems = (links) => {
 
 smoothScrollToElems('.header .header__container a');
 smoothScrollToElems('.header .mobile-menu .nav a');
+smoothScrollToElems('.target-form');
+smoothScrollToElems('.target-block');

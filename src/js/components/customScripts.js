@@ -11,3 +11,14 @@ const onlyDigitsEnterInput = (inputElems) => {
 };
 
 onlyDigitsEnterInput(inputNumberElems);
+
+const footerYearSpans = document.querySelectorAll('.footer .footer__copyright strong span');
+
+if (footerYearSpans) {
+    const date = new Date();
+    const year = date.getFullYear();
+
+    footerYearSpans.forEach(span => {
+        span.textContent = year;
+    });
+}
