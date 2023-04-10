@@ -11,6 +11,11 @@
             padding: 55px 20px;
         }
     }
+    .gallery {
+        .banner {
+            max-width: 1240px;
+        }
+    }
 }
 
 @include big-desktop {
@@ -35,6 +40,11 @@
         &__container {
             padding: 55px 75px;
             gap: 40px;
+        }
+    }
+    .gallery {
+        .banner {
+            max-width: 1040px;
         }
     }
 }
@@ -138,6 +148,15 @@
             gap: 40px;
         }
     }
+    .gallery {
+        .banner {
+            max-width: 800px;
+
+            .title {
+                font-size: 40px;
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -180,6 +199,14 @@
         .images {
             width: fit-content;
             margin: 0 auto;
+        }
+    }
+    .gallery {
+        padding-bottom: 100px;
+
+        .banner {
+            max-width: 700px;
+            padding: 35px;
         }
     }
 }
@@ -442,6 +469,31 @@
             }
         }
     }
+    .gallery {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        &__top,
+        &__bottom {
+            gap: 10px;
+        }
+
+        &__top {
+            margin-bottom: 10px;
+        }
+        .banner {
+            max-width: 500px;
+            .title {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            .text {
+                font-size: 18px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -605,6 +657,30 @@
             }
         }
     }
+    .gallery {
+        &__top,
+        &__bottom {
+            flex-direction: column;
+        }
+        .image {
+            img {
+                max-height: 420px;
+                min-height: 420px;
+            }
+        }
+
+        .banner {
+            position: static;
+            transform: none;
+            margin-top: 25px;
+            max-width: inherit;
+            border-radius: 12px;
+
+            .title {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 @include small-mobile {
@@ -662,6 +738,14 @@
     .result {
         .title {
             font-size: 20px;
+        }
+    }
+    .gallery {
+        .image {
+            img {
+                max-height: 320px;
+                min-height: 320px;
+            }
         }
     }
 }
