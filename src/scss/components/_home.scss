@@ -1022,3 +1022,102 @@
         }
     }
 }
+
+.about-us {
+    padding-top: 130px;
+    padding-bottom: 154px;
+
+    .label {
+        @include label;
+        max-width: fit-content;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .title {
+        @include title;
+        margin-top: 40px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 21px;
+        line-height: 130%;
+        text-align: center;
+        color: var(--cs-text-main);
+        margin-top: 0;
+        margin-bottom: 86px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1034px;
+
+        strong {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__container {
+        @include flex-all-sb;
+        max-width: 1420px;
+        margin: 0 auto;
+        gap: 100px;
+
+        .info {
+            display: flex;
+            gap: 30px;
+            max-width: 399px;
+
+            &:not(:last-child) {
+                margin-bottom: 100px;
+            }
+
+            .icon {
+                @include flex-all-center;
+                width: 74px;
+                height: 74px;
+                min-width: 74px;
+                min-height: 74px;
+                border-radius: 50%;
+                background-color: var(--white);
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 130%;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 25px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 140%;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__logo {
+        position: relative;
+
+        &::before {
+            content: "";
+            @include flex-all-center;
+            position: absolute;
+            width: 370px;
+            height: 370px;
+            border-radius: 50%;
+            background-color: var(--white);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+}
