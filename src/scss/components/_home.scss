@@ -1262,3 +1262,31 @@
         }
     }
 }
+
+.partners {
+    margin-bottom: 170px;
+
+    &__container {
+        @include flex-all-center;
+        gap: 10px;
+        margin-bottom: 70px;
+
+        .partner {
+            @include flex-all-center;
+            max-width: 274px;
+            width: 100%;
+            height: 166px;
+            background-color: var(--white);
+            border-radius: 4px;
+        }
+    }
+    .text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 140%;
+        text-align: center;
+        color: var(--cs-text-main);
+        max-width: 1092px;
+        margin: 0 auto;
+    }
+}
