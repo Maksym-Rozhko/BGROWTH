@@ -173,6 +173,23 @@
             }
         }
     }
+    .form-block {
+        margin-bottom: 100px;
+
+        &__container {
+            padding: 50px 75px;
+
+            .title {
+                font-size: 40px;
+            }
+
+            .form {
+                &__btns {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
 }
 
 @include tablet {
@@ -547,6 +564,24 @@
             font-size: 18px;
         }
     }
+    .form-block {
+        margin-bottom: 25px;
+
+        &__container {
+            padding: 40px 30px;
+
+            .title {
+                font-size: 30px;
+                margin-top: 30px;
+            }
+
+            .form {
+                &__fields {
+                    gap: 5px 10px;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -762,6 +797,22 @@
                 }
                 p {
                     font-size: 16px;
+                }
+            }
+        }
+    }
+    .form-block {
+        &__container {
+            padding: 30px 15px;
+            border-radius: 12px;
+
+            .title {
+                font-size: 24px;
+            }
+
+            .form {
+                &__fields {
+                    grid-template-columns: 1fr;
                 }
             }
         }
