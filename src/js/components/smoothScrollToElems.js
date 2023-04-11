@@ -9,7 +9,6 @@ const smoothScrollToElems = (links) => {
                 const blockID = anchor.getAttribute('href');
 
                 anchor.addEventListener('click', (e) => {
-                    console.log('ss');
                     e.preventDefault();
 
                     if (menu.classList.contains('menu--active')) {

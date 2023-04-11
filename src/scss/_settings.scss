@@ -72,6 +72,17 @@ a {
   overflow-x: hidden;
 }
 
+.preload-waiting .header,
+.preload-waiting .main,
+.preload-waiting .footer {
+    opacity: 0;
+    background: #000;
+}
+
+#preloader.preloader-hide {
+    animation: decreaseOpacity forwards 3s;
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 0 var(--container-offset);
